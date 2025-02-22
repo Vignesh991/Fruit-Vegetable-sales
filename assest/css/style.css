@@ -1,0 +1,682 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+*, h1, h2, h3, h4, h5, h6, ul, li, a {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --primary: #3CB815;
+  --secondary: #F65005;
+  --light: #F7F8FC;
+  --dark: #111111;
+}
+
+.hoverimg {
+  transform: scale(0.9);
+  transition: 0.3s ease-in-out;
+}
+
+.hoverimg:hover {
+  transform: scale(1);
+  background-color: #F7F8FC;
+  box-shadow: 0px 0px 99px rgba(0, 0, 0, 0.1019607843);
+}
+
+.topbar {
+  padding-top: 20px;
+}
+.topbar a i {
+  font-size: 20px;
+  color: black;
+}
+.topbar a i:hover {
+  color: #F65005;
+}
+.topbar .topsec {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.topbar .topsec .email-icon {
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.topbar .media {
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+}
+.topbar .media h6 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+header {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+}
+header nav {
+  justify-content: space-between;
+}
+header nav .text-primary {
+  color: #3CB815 !important;
+  font-weight: 700;
+  font-family: "Merriweather";
+}
+header nav .text-primary .text-secondary {
+  color: #F65005 !important;
+}
+header nav ul {
+  gap: 40px;
+}
+header nav ul li {
+  list-style: none;
+  color: white;
+  filter: drop-shadow(0 0 0.5em rgba(0, 0, 0, 0.5333333333));
+  text-shadow: 0px 0px 1.5em transparent;
+  transition: all 200ms;
+  cursor: pointer;
+}
+header nav ul li:hover {
+  color: #3CB815;
+}
+header nav ul li::after, header nav ul li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 110%;
+  height: 2px;
+  background: currentColor;
+  pointer-events: none;
+  transition: all 200ms;
+}
+header nav ul li::before {
+  left: 0;
+  right: 0;
+  opacity: 0.25;
+}
+header nav ul li::after {
+  opacity: 0;
+  left: -10em;
+  right: -10em;
+  border-radius: 50%;
+}
+header nav ul li:hover::after {
+  left: 0;
+  right: 0;
+  opacity: 1;
+  box-shadow: 0px 0px 4px currentColor;
+  border-radius: 0%;
+}
+header nav ul a i {
+  color: white;
+}
+header nav ul a i:hover {
+  color: #3CB815;
+}
+
+.hero-sec {
+  position: relative;
+  z-index: 1;
+  padding: 180px 0px 80px;
+}
+.hero-sec .banner-heading {
+  color: white;
+}
+.hero-sec .banner-heading h1 {
+  font-size: 65px;
+  line-height: 75px;
+  margin-bottom: 40px;
+  font-family: "Merriweather";
+}
+.hero-sec .banner-heading a button {
+  background-color: #3CB815;
+  padding: 10px 36px;
+  color: #fff;
+  border: 1px solid hsl(190, 64%, 22%);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+.hero-sec .banner-heading a button:hover {
+  background-color: #0c6c44;
+}
+.hero-sec .banner-heading a .service-btn {
+  background-color: #f76a2a;
+}
+.hero-sec .banner-video {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+.hero-sec .banner-video::before {
+  content: "";
+  background-color: black;
+  opacity: 60%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.hero-sec .banner-video .video-sec {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider-sec {
+  padding: 120px 0px 60px 0px;
+  overflow: hidden;
+}
+.slider-sec img {
+  width: 100%;
+}
+.slider-sec .response-slide .slick-dots li button:before {
+  font-size: 10px;
+}
+
+.about-sec {
+  padding: 20px 0px 100px 0px;
+}
+.about-sec img {
+  width: 95%;
+  height: 100%;
+  border-radius: 20px;
+}
+.about-sec h2 {
+  font-size: 45px;
+  line-height: 55px;
+  font-family: "Merriweather";
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.about-sec .main-content {
+  font-size: 17px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+.about-sec i {
+  color: #3CB815;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.about-sec a button {
+  background-color: #3CB815;
+  padding: 10px 36px;
+  color: #fff;
+  border: 1px solid #3CB815;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+.about-sec a button:hover {
+  background-color: #0c6c44;
+}
+
+.feature {
+  background-image: url("../images/Feature/bg-icon.png");
+  background-size: contain;
+  padding: 50px 0px 100px 0px;
+  background-color: #F7F8FC !important;
+}
+.feature .feature-content {
+  text-align: center;
+  position: relative;
+  padding-top: 25px;
+}
+.feature .feature-content ::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  top: 0;
+  left: 50%;
+  transform: translateX(0);
+  background: #3CB815;
+}
+.feature .feature-content ::after {
+  position: absolute;
+  content: "";
+  width: 90px;
+  height: 2px;
+  top: 10px;
+  right: 44%;
+  transform: translateX(0);
+  background: var(--secondary);
+}
+.feature .feature-content h2 {
+  font-size: 50px;
+  line-height: 65px;
+  font-family: "Merriweather";
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.feature .card {
+  border-radius: 20px;
+}
+.feature .card img {
+  width: 30%;
+  height: 30%;
+  margin-left: 35%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.feature .card .bg-box {
+  padding: 2rem !important;
+  text-align: center;
+}
+.feature .card .bg-box img {
+  margin-bottom: 25px;
+}
+.feature .card .bg-box h5 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.feature .card .bg-box a button {
+  background-color: transparent;
+  padding: 10px 36px;
+  color: #3CB815;
+  border: 1px solid #3CB815;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+.feature .card .bg-box a button:hover {
+  background-color: #3CB815;
+  color: #fff;
+}
+
+.product {
+  padding: 50px 0px 100px 0px;
+}
+.product .product-heading {
+  position: relative;
+  padding-top: 25px;
+}
+.product .product-heading ::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+  background: #3CB815;
+}
+.product .product-heading ::after {
+  position: absolute;
+  content: "";
+  width: 90px;
+  height: 2px;
+  top: 10px;
+  left: 0;
+  transform: translateX(0);
+  background: var(--secondary);
+}
+.product .product-heading h2 {
+  font-size: 50px;
+  line-height: 65px;
+  font-family: "Merriweather";
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.product ul {
+  justify-content: flex-end;
+  margin-top: 15%;
+}
+.product ul li {
+  list-style-type: none;
+  margin-right: 10px;
+}
+.product ul li a button {
+  background-color: transparent;
+  padding: 10px 36px;
+  color: #111111;
+  border: 1px solid #3CB815;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+.product ul li a button:hover {
+  background-color: #3CB815;
+  transition: 0.5s;
+  color: #fff;
+}
+.product h3 {
+  margin-top: 50px;
+}
+.product #vegetable-list {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.product #vegetable-list .card {
+  border-radius: 20px;
+}
+.product #vegetable-list .card img {
+  border-radius: 20px 20px 0px 0px;
+}
+.product #vegetable-list .card .card-body {
+  text-align: center;
+}
+.product #vegetable-list .card .card-body h4 {
+  margin-bottom: 10px;
+}
+.product #vegetable-list .card .card-body h4 a {
+  text-decoration: none;
+  color: #111111;
+  font-family: "Merriweather";
+}
+.product #vegetable-list .card .card-body h4 a:hover {
+  color: #3CB815;
+}
+.product #vegetable-list .card .card-body p {
+  margin-right: 10px;
+  color: #3CB815;
+}
+.product #vegetable-list .card .card-body p span {
+  margin-left: 15px;
+  color: #111111;
+}
+.product #vegetable-list .card .card-body .view-page {
+  display: flex;
+  gap: 15px;
+}
+.product #vegetable-list .card .card-body .view-page a {
+  text-decoration: none;
+  border: 1px solid #3CB815;
+  padding: 6px;
+  border-radius: 10px;
+  color: #111111;
+}
+.product #vegetable-list .card .card-body .view-page a:hover {
+  color: #fff;
+  background-color: #3CB815;
+}
+.product #vegetable-list .card .card-body .view-page a i {
+  color: #3CB815;
+}
+.product #vegetable-list .card .card-body .view-page a i:hover {
+  color: #fff;
+}
+.product #fruit-list {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.product #fruit-list .card {
+  border-radius: 20px;
+}
+.product #fruit-list .card img {
+  border-radius: 20px 20px 0px 0px;
+}
+.product #fruit-list .card .card-body {
+  text-align: center;
+}
+.product #fruit-list .card .card-body h4 {
+  margin-bottom: 10px;
+}
+.product #fruit-list .card .card-body h4 a {
+  text-decoration: none;
+  color: #111111;
+  font-family: "Merriweather";
+}
+.product #fruit-list .card .card-body h4 a:hover {
+  color: #3CB815;
+}
+.product #fruit-list .card .card-body p {
+  margin-right: 10px;
+  color: #3CB815;
+}
+.product #fruit-list .card .card-body p span {
+  margin-left: 15px;
+  color: #111111;
+}
+.product #fruit-list .card .card-body .view-page {
+  display: flex;
+  gap: 15px;
+}
+.product #fruit-list .card .card-body .view-page a {
+  text-decoration: none;
+  border: 1px solid #3CB815;
+  padding: 6px;
+  border-radius: 10px;
+  color: #111111;
+}
+.product #fruit-list .card .card-body .view-page a:hover {
+  color: #fff;
+  background-color: #3CB815;
+}
+.product #fruit-list .card .card-body .view-page a i {
+  color: #3CB815;
+}
+.product #fruit-list .card .card-body .view-page a i:hover {
+  color: #fff;
+}
+.product #leaf-list {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.product #leaf-list .card {
+  border-radius: 20px;
+}
+.product #leaf-list .card img {
+  border-radius: 20px 20px 0px 0px;
+  background: antiquewhite;
+}
+.product #leaf-list .card .card-body {
+  text-align: center;
+}
+.product #leaf-list .card .card-body h4 {
+  margin-bottom: 10px;
+}
+.product #leaf-list .card .card-body h4 a {
+  text-decoration: none;
+  color: #111111;
+  font-family: "Merriweather";
+}
+.product #leaf-list .card .card-body h4 a:hover {
+  color: #3CB815;
+}
+.product #leaf-list .card .card-body p {
+  margin-right: 10px;
+  color: #3CB815;
+}
+.product #leaf-list .card .card-body p span {
+  margin-left: 15px;
+  color: #111111;
+}
+.product #leaf-list .card .card-body .view-page {
+  display: flex;
+  gap: 15px;
+}
+.product #leaf-list .card .card-body .view-page a {
+  text-decoration: none;
+  border: 1px solid #3CB815;
+  padding: 6px;
+  border-radius: 10px;
+  color: #111111;
+}
+.product #leaf-list .card .card-body .view-page a:hover {
+  color: #fff;
+  background-color: #3CB815;
+}
+.product #leaf-list .card .card-body .view-page a i {
+  color: #3CB815;
+}
+.product #leaf-list .card .card-body .view-page a i:hover {
+  background-color: #3CB815;
+  color: #fff;
+}
+.product a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.product a button {
+  background-color: #3CB815;
+  padding: 10px 36px;
+  color: #fff;
+  border: 1px solid #3CB815;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.visit {
+  background-image: url("../images/visit/bg-icon.png");
+  background-size: contain;
+  background-color: #3CB815;
+  padding: 50px 0px 50px 0px;
+  margin-bottom: 150px;
+}
+.visit h1 {
+  color: #fff;
+  font-size: 45px;
+  line-height: 55px;
+  font-family: "Merriweather";
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.visit p {
+  color: #fff;
+}
+.visit a {
+  display: flex;
+  justify-content: end;
+  text-decoration: none;
+  margin-top: 15%;
+}
+.visit a button {
+  background-color: #f65005;
+  padding: 10px 60px;
+  color: #fff;
+  border: 1px solid #f65005;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+.visit a button:hover {
+  background-color: #f76a2a;
+}
+
+footer {
+  padding: 100px 0px 0px 0px;
+  background-color: #111111;
+  position: relative;
+}
+footer .text-primary {
+  color: #3CB815 !important;
+  font-weight: 700;
+  font-family: "Merriweather";
+  margin-bottom: 20px;
+}
+footer .text-primary .text-secondary {
+  color: #F65005 !important;
+}
+footer p {
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 30px;
+  color: #999999;
+}
+footer .media-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .media-icon a {
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+footer .media-icon a:hover {
+  background-color: #fff;
+  color: #111111;
+}
+footer .media-icon a i {
+  color: #fff;
+  font-size: 20px;
+}
+footer .media-icon a i:hover {
+  color: #111111;
+}
+footer h4 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+footer .address li {
+  list-style: none;
+}
+footer .address li a {
+  display: flex;
+  text-decoration: none;
+  gap: 10px;
+}
+footer .address li a i {
+  color: #999999;
+}
+footer .address li a p:hover {
+  color: #fff;
+}
+footer .quick-links li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+footer .quick-links li a {
+  text-decoration: none;
+  color: #999999;
+}
+footer .quick-links li a:hover {
+  color: #fff;
+  transition: 0.3sease;
+}
+footer form input {
+  width: 100%;
+  padding: 5%;
+  border-radius: 10px;
+}
+footer form input:hover {
+  box-shadow: 0px 0px 99px #3CB815;
+}
+footer form button {
+  padding: 10px;
+  width: 7%;
+  border-radius: 10px;
+  position: absolute;
+  right: 7%;
+  top: 55%;
+  background-color: #3CB815;
+  border: #3CB815;
+  color: #fff;
+}
+footer .bottom-sec {
+  padding: 20px 0px 0px 0px;
+  font-size: 15px;
+  border-top: 1px solid #999999;
+  margin-top: 40px;
+}
+footer .bottom-sec .name {
+  color: #fff;
+  font-weight: 600;
+}/*# sourceMappingURL=style.css.map */
